@@ -15,7 +15,7 @@ async function main(minGrade, maxGrade, limit) {
 main(5, 2.5, allCount);
 
 async function loadCSV() {
-  const res = await fetch('../data/jyukugo.csv');
+  const res = await fetch('./data/jyukugo.csv');
   const text = await res.text();
   const csv = text.split(/\r?\n/).slice(1).map(v => v.split('\t'));
   csv.forEach(v => {
