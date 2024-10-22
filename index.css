@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+  font-family: 'メイリオ', Meiryo, sans-serif;
+  overflow: hidden;
+}
+
+body.wrong {
+  animation: wrong-body 0.15s;
+}
+
+body.wrong #mondai {
+  color: #ff8080;
+}
+
+/* 左右に揺らす */
+@keyframes wrong-body {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#container {
+  height: 100%;
+  justify-content: center;
+}
+
+#container, .lower-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.lower-container {
+  width: 500px;
+  position: absolute;
+  bottom: 6rem;
+}
+
+.lower-container > * {
+  width: 100%;
+}
+
+#mondai {
+  font-size: 10rem;
+  text-align: center;
+  letter-spacing: 1rem;
+  margin-bottom: 6rem;
+  user-select: all;
+  transition: color 0.25s;
+}
+
+#mondai.correct {
+  color: #00aa00;
+}
+
+#mondai rt {
+  font-size: 4rem;
+  user-select: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  font-family: 'NotoSansJP';
+  border-radius: 0.25rem;
+  transition: box-shadow 0.1s linear;
+}
+
+input:focus {
+  box-shadow: 0 0 4px 4px rgb(125 200 255 / 75%);
+}
+
+input[disabled] {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  pointer-events: none !important;
+}
+
+.check-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+#prev-kaitou {
+  margin-bottom: -2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #ff8080;
+}
+
+#kaitou {
+  font-size: 3rem;
+  padding: 0.5rem 1rem;
+}
+
+.check-container > input {
+  width: 120px;
+  font-size: 2rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  background-color: white;
+}

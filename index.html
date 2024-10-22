@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>漢字マスター</title>
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="container">
+    <span id="mondai">
+      <ruby>
+        <span id="mondai-text"></span>
+        <rt id="mondai-rt"></rt>
+      </ruby>
+    </span>
+    <div class="lower-container">
+      <div id="prev-kaitou"></div>
+      <input type="text" id="kaitou" autocomplete="off" disabled>
+      <div class="check-container">
+        <input type="button" id="skip" value="スキップ" disabled>
+        <input type="button" id="clear" value="クリア" disabled>
+        <input type="button" id="check" value="回答" disabled>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
