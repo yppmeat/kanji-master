@@ -141,6 +141,7 @@ function clearAnswer() {
 }
 
 async function skipAnswer() {
+  elements.kaitou.value = '';
   showCorrectAnswer(selectedMondai[currentIndex][2][0]);
 }
 
