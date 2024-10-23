@@ -229,5 +229,5 @@ function getNearestString(answer, correct) {
   if(index == -1) return { result: '' };
   correct = correct[index];
   const result = correct.first.padEnd(correct.value.length - correct.last.length, '　') + correct.last;
-  return { value: correct.value, result: result.replaceAll('　', '&emsp;') };
+  return { value: correct.value, result: result.replaceAll('　', '&emsp;').slice(0, correct.value.length) };
 }
