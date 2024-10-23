@@ -127,7 +127,7 @@ async function checkAnswer() {
   } else {
     const { value, result } = getNearestString(answer, selectedMondai[currentIndex][2]);
     elements.mondai_rt.innerHTML = result;
-    if(value && convertDakuten(value) == convertDakuten(answer)) {
+    if(value && (convertDakuten(value) == convertDakuten(answer) || value == result)) {
       elements.prev_kaitou.innerText = '惜しい！\n' + answer;
     } else {
       elements.prev_kaitou.innerText = answer;
